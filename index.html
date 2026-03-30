@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trivia Battle Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="scoreAndRound" class="screen">
+        <h2 id="roundTitle">Round 1</h2>
+        <p id="scorePl1">Player1: 0</p>
+        <p id="scorePl2">Player1: 0</p>
+      </div>
+
+      <!-- Player Setup Screen -->
+      <div id="playerSetup" class="screen active">
+        <h2>Enter Player Names</h2>
+        <input type="text" id="player1" placeholder="Player 1 Name" />
+        <br />
+        <input type="text" id="player2" placeholder="Player 2 Name" />
+        <br />
+        <button onclick="submitButton()">Start Game</button>
+        <p id="message"></p>
+      </div>
+
+      <!-- Category Selection Screen -->
+      <div id="categoryScreen" class="screen">
+        <label for="category">Select a Category:</label>
+        <br /><br />
+        <select id="category">
+          <option value="" disabled selected>Choose a category</option>
+          <option value="music">Music</option>
+          <option value="sport_and_leisure">Sport & Leisure</option>
+          <option value="film_and_tv">Film & TV</option>
+          <option value="arts_and_literature">Arts & Literature</option>
+          <option value="history">History</option>
+          <option value="society_and_culture">Society & Culture</option>
+          <option value="science">Science</option>
+          <option value="geography">Geography</option>
+          <option value="food_and_drink">Food & Drink</option>
+          <option value="general_knowledge">General Knowledge</option>
+        </select>
+
+        <br /><br />
+        <button id="startRoundBtn">Submit</button>
+        <p id="categoryMessage"></p>
+      </div>
+
+      <!-- Question Screen -->
+      <div id="questionScreen" class="screen">
+        <h2 id="turn">Player Turn</h2>
+        <p id="difficulty"></p>
+        <p id="questionText"></p>
+        <div id="options">
+          <input type="radio" name="answer" id="opt1" />
+          <span id="opt1Text"></span><br />
+          
+          <input type="radio" name="answer" id="opt2" />
+          <span id="opt2Text"></span><br />
+
+          <input type="radio" name="answer" id="opt3" />
+          <span id="opt3Text"></span><br />
+
+          <input type="radio" name="answer" id="opt4" />
+          <span id="opt4Text"></span>
+        </div>
+
+        <br /><br />
+        <div style="display: flex; justify-content: space-between">
+          <button id="nextBtn">Next</button>
+        </div>
+      </div>
+
+      <!-- Summary Screen -->
+      <div id="summaryScreen" class="screen">
+        <h2>Round Summary</h2>
+        <p id="summaryP1"></p>
+        <p id="summaryP2"></p>
+        <button id="nextRound">Next Round</button>
+        <button id="endGameBtn">End Game</button>
+      </div>
+
+      <!-- Final Result Screen -->
+      <div id="finalScreen" class="screen">
+        <h2>Final Results</h2>
+        <p id="finalP1"></p>
+        <p id="finalP2"></p>
+        <h3 id="winnerMessage"></h3>
+      </div>
+    </div>
+    <!-- END MAIN CONTAINER -->
+    <script src="script.js"></script>
+  </body>
+</html>
